@@ -5,19 +5,19 @@ import './ProductoDetalle.css';
 
 const ProductoDetalle = () => {
   const { idCelular } = useParams();
-  const celular = celulares.find((c) => c.id === Number(idCelular));
-  const [imgIndex, setImgIndex] = useState(0);
+  const celular = celulares.find((c) => c.id === parseInt(idCelular));
+  const [imgIndex, SetImagen] = useState(0);
 
   if (!celular) {
     return <p className="not-found">Celular no encontrado</p>;
   }
 
   const prevImage = () => {
-    setImgIndex((old) => (old === 0 ? celular.fotos.length - 1 : old - 1));
+    SetImagen((old) => (old === 0 ? celular.fotos.length - 1 : old - 1));
   };
 
   const nextImage = () => {
-    setImgIndex((old) => (old === celular.fotos.length - 1 ? 0 : old + 1));
+    SetImagen((old) => (old === celular.fotos.length - 1 ? 0 : old + 1));
   };
 
   return (

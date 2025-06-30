@@ -10,12 +10,12 @@ const Productos = () => {
 
 
   const celularesFiltrados = idMarca
-    ? celulares.filter((c) => c.marcaId === Number(idMarca))
+    ? celulares.filter((c) => c.marcaId === parseInt(idMarca))
     : celulares;
 
 
   const nombreMarca = idMarca
-    ? marcas.find((m) => m.id === Number(idMarca))?.nombre || 'Marca no encontrada'
+    ? marcas.find((m) => m.id === parseInt(idMarca))?.nombre || 'Marca no encontrada'
     : 'Todos los celulares';
 
   return (
