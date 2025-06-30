@@ -3,7 +3,7 @@ import { celulares } from '../data/data';
 import CardCelular from '../components/CardCelular';
 import './Home.css';
 
-const destacados = celulares.slice(0, 4);
+const destacados = celulares.slice(0, 3);
 
 const Home = () => {
   return (

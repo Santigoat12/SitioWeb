@@ -39,7 +39,7 @@ export const celulares = [
     marcaId: 1,
     fotos: [
       'https://touchunwired.com/wp-content/uploads/2020/04/iphone_se-266x300-2.png',
-      'https://media.croma.com/image/upload/v1708664203/Croma%20Assets/Communication/Mobiles/Images/262529_5_bhjgjl.png',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvHTuQD2XKubWMim3dn3aIv9feTkCm4Qwrpw&shttps://media.croma.com/image/upload/v1708664203/Croma%20Assets/Communication/Mobiles/Images/262529_5_bhjgjl.png',
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1zDsUJN3Ggsgr3rKmO_EdAqRP9DKukVuIlA&s'
     ]
   },
@@ -114,9 +114,9 @@ export const celulares = [
     precio: 1199,
     marcaId: 3,
     fotos: [
-      'https://www.megatone.net/images/Articulos/zoom2x/209/MKT0502MHM-1.png',
+      'https://cdn.prod.website-files.com/632e1b3fb161a903129c733e/67337b320280897b631dcf2a_Xiaomi-Redmi-Note-13-PRO-4G-LTE-256GB-8GB-6-67-200MP-Triple-for-Tmobile-Metro-Tello-Mint-Global-GLOBAL-Bands-Unlocked-Lavender-Purple_beb4935e-4dac-4110-976e-d6744d6853fa.0d6b430e681f4fb6d1cd599262823e2b.jpeg',
       'https://acdn-us.mitiendanube.com/stores/001/531/943/products/hff64a44d773b43969185dc3f1e9f5cf1x_jpg_960x960_jpg_d971a722-3c3d-4c5f-bc5d-456e74937256_500x-23b76222e0a3a0caef16980778581235-1024-1024.png',
-      'https://www.cordobadigital.net/wp-content/uploads/2024/01/Redmi-note-13-pro.png'
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWpSWtasvS0FS-qJBxM4Nr010i0qvs2PCLvQ&stps://www.cordobadigital.net/wp-content/uploads/2024/01/Redmi-note-13-pro.png'
     ]
   },
   {
@@ -151,7 +151,7 @@ export const celulares = [
     marcaId: 3,
     fotos: [
       'https://i0.wp.com/mstore.ie/wp-content/uploads/2023/05/POCO-X5-Pro-5G-blue.png?fit=1600%2C1600&ssl=1',
-      'https://www.tupi.com.py/imagen/600__600__6b0182-95264_2.png',
+      'https://i.blogs.es/49c9fe/poco-x5-1/650_1200.webp',
       'https://wsg.izenecdn.com/media/catalog/product/cache/84efb3eb3fce34f31ba40f0e6c53143e/_/_/__16863130593972.png'
     ]
   },

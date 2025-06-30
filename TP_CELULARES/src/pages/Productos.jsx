@@ -1,4 +1,3 @@
-// src/pages/Productos.jsx
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { celulares, marcas } from '../data/data';
@@ -30,9 +29,6 @@ const Productos = () => {
           ))}
         </div>
       )}
-      <Link to="/productos" className="volver-btn">
-        Ver todos los productos
-      </Link>
     </section>
   );
 };

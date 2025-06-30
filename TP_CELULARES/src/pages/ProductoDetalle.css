@@ -1,113 +1,114 @@
 .detalle-container {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #fff;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-.volver-btn {
-  display: inline-block;
-  margin-bottom: 1.5rem;
-  color: #007aff;
-  font-weight: 600;
-  text-decoration: none;
-  user-select: none;
-  transition: color 0.3s ease;
-}
-
-.volver-btn:hover {
-  color: #005fcc;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #111;
-  user-select: text;
-}
-
-.detalle-main {
+.detalle-layout {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  gap: 40px;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-.galeria-detalle {
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-  border-radius: 12px;
+.detalle-carousel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detalle-imagen {
+  width: 350px;
+  height: 300px;
+  background-color: #f5f5f7;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-  background: #fff;
-  user-select: none;
 }
 
-.detalle-img {
-  width: 100%;
-  height: 320px;
+.detalle-imagen img {
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
-  display: block;
+  transition: 0.3s ease;
 }
 
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 122, 255, 0.8);
-  border: none;
-  color: white;
+.detalle-arrow {
   font-size: 2rem;
-  padding: 0 0.75rem;
-  border-radius: 50%;
+  background: none;
+  border: none;
+  color: #0071e3;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  user-select: none;
-  z-index: 10;
+  transition: 0.3s;
 }
 
-.carousel-btn:hover {
-  background-color: #005fcc;
-}
-
-.carousel-btn.left {
-  left: 10px;
-}
-
-.carousel-btn.right {
-  right: 10px;
+.detalle-arrow:hover {
+  color: #005bb5;
 }
 
 .detalle-info {
-  max-width: 400px;
+  flex: 1;
+  min-width: 300px;
+}
+
+.detalle-titulo {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 1rem;
+}
+
+.detalle-descripcion {
   font-size: 1.1rem;
-  color: #444;
-  user-select: text;
+  color: #6e6e73;
+  margin-bottom: 1rem;
 }
 
-.precio-detalle {
-  margin-top: 1.2rem;
-  font-size: 1.5rem;
+.detalle-precio {
+  font-size: 1.8rem;
   font-weight: 700;
-  color: #007aff;
+  color: #111;
+  margin-bottom: 2rem;
 }
 
-/* Responsive */
+.detalle-botones {
+  display: flex;
+  gap: 20px;
+}
 
-@media (max-width: 768px) {
-  .detalle-main {
-    flex-direction: column;
-  }
+.detalle-btn {
+  flex: 1;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 500;
+  border: none;
+}
 
-  .galeria-detalle,
-  .detalle-info {
-    max-width: 100%;
-  }
+.detalle-btn.comprar {
+  background-color: #0071e3;
+  color: white;
+}
 
-  .detalle-img {
-    height: 260px;
-  }
+.detalle-btn.comprar:hover {
+  background-color: #005bb5;
+}
+
+.detalle-btn.volver {
+  background-color: #f2f2f2;
+  color: #0071e3;
+  border: 1px solid #ccc;
+}
+
+.detalle-btn.volver:hover {
+  background-color: #e5e5e5;
 }

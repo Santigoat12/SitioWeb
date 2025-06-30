@@ -1,45 +1,59 @@
-import React, { useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { celulares } from '../data/data';
 import './ProductoDetalle.css';
 
 const ProductoDetalle = () => {
   const { idCelular } = useParams();
-  const celular = celulares.find((c) => c.id === parseInt(idCelular));
-  const [imgIndex, SetImagen] = useState(0);
+  const navigate = useNavigate();
+  const [celular, setCelular] = useState(null);
+  const [indexImagen, setIndexImagen] = useState(0);
 
-  if (!celular) {
-    return <p className="not-found">Celular no encontrado</p>;
-  }
+  useEffect(() => {
+    const encontrado = celulares.find((cel) => cel.id === parseInt(idCelular));
+    setCelular(encontrado);
+    setIndexImagen(0);
+  }, [idCelular]);
 
-  const prevImage = () => {
-    SetImagen((old) => (old === 0 ? celular.fotos.length - 1 : old - 1));
+  const siguiente = () => {
+    if (celular) {
+      setIndexImagen((prev) => (prev + 1) % celular.fotos.length);
+    }
   };
 
-  const nextImage = () => {
-    SetImagen((old) => (old === celular.fotos.length - 1 ? 0 : old + 1));
+  const anterior = () => {
+    if (celular) {
+      setIndexImagen((prev) =>
+        prev === 0 ? celular.fotos.length - 1 : prev - 1
+      );
+    }
   };
+
+  if (!celular) return <p className="detalle-cargando">Cargando celular...</p>;
 
   return (
-    <section className="detalle-container">
-      <Link to="/productos" className="volver-btn">← Volver a productos</Link>
-      <h2>{celular.nombre}</h2>
-      <div className="detalle-main">
-        <div className="galeria-detalle">
-          <button onClick={prevImage} className="carousel-btn left" aria-label="Imagen anterior">&#10094;</button>
-          <img
-            src={celular.fotos[imgIndex]}
-            alt={`${celular.nombre} imagen ${imgIndex + 1}`}
-            className="detalle-img"
-          />
-          <button onClick={nextImage} className="carousel-btn right" aria-label="Imagen siguiente">&#10095;</button>
+    <div className="detalle-container">
+      <div className="detalle-layout">
+        <div className="detalle-carousel">
+          <button className="detalle-arrow left" onClick={anterior}>‹</button>
+          <div className="detalle-imagen">
+            <img src={celular.fotos[indexImagen]} alt={celular.nombre} />
+          </div>
+          <button className="detalle-arrow right" onClick={siguiente}>›</button>
         </div>
+
         <div className="detalle-info">
-          <p>{celular.descripcion}</p>
-          <p className="precio-detalle">Precio: ${celular.precio}</p>
+          <h2 className="detalle-titulo">{celular.nombre}</h2>
+          <p className="detalle-descripcion">{celular.descripcion}</p>
+          <p className="detalle-precio">${celular.precio}</p>
+
+          <div className="detalle-botones">
+            <button className="detalle-btn comprar">Comprar</button>
+            <button className="detalle-btn volver" onClick={() => navigate(-1)}>Volver</button>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

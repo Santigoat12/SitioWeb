@@ -1,17 +1,15 @@
-/* src/layouts/MainLayout.css */
-
 .main-layout {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: var(--xp-blue-medium); /* Fondo general como el escritorio XP */
+    background-color: var(--xp-blue-medium); 
 }
 
 .main-content {
     flex-grow: 1;
-    width: 100%; /* Asegura que ocupe todo el ancho disponible */
-    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
-    padding: 0; /* No padding horizontal aquí, las secciones internas lo manejarán */
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: 0; 
 }
 
 .page-title {
@@ -22,7 +20,7 @@
     margin-bottom: 30px;
     margin-top: 30px;
     text-shadow: 1px 1px 0px var(--xp-white);
-    padding: 0 15px; /* Padding para evitar que el texto toque los bordes */
+    padding: 0 15px; 
 }
 
 .grid-container {
@@ -30,9 +28,9 @@
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 25px;
     justify-content: center;
-    padding: 20px; /* Añade padding horizontal al grid para las tarjetas */
-    max-width: 1200px; /* Limita el ancho del grid para que no se estire demasiado */
-    margin: 0 auto; /* Centra el grid dentro del main-content */
+    padding: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
 @media (max-width: 768px) {
