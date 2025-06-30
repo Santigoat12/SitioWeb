@@ -1,0 +1,21 @@
+/* Ajustamos para footer sticky */
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto; /* el main ocupa todo el espacio disponible */
+}
+
+footer {
+  flex-shrink: 0; /* no se achica */
+}
