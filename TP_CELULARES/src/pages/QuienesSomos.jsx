@@ -1,4 +1,3 @@
-// src/pages/QuienesSomos.jsx
 import React from 'react';
 import './QuienesSomos.css';
 

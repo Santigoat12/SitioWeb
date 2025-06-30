@@ -8,12 +8,12 @@ import './Productos.css';
 const Productos = () => {
   const { idMarca } = useParams();
 
-  // Si hay idMarca filtramos, sino mostramos todos
+
   const celularesFiltrados = idMarca
     ? celulares.filter((c) => c.marcaId === Number(idMarca))
     : celulares;
 
-  // Obtenemos el nombre de la marca para mostrar título si se filtra
+
   const nombreMarca = idMarca
     ? marcas.find((m) => m.id === Number(idMarca))?.nombre || 'Marca no encontrada'
     : 'Todos los celulares';
