@@ -22,13 +22,13 @@
 .footer-brand h3 {
   font-size: 1.3rem;
   font-weight: 600;
-  color: rgba(0, 122, 255, 0.7);
+  color: #007aff;
   margin-bottom: 0.3rem;
 }
 
 .footer-brand p {
   font-size: 0.9rem;
-  color: #4b5563;
+  color: #007aff;
 }
 
 .footer-links,
@@ -37,7 +37,7 @@
   flex-direction: column;
   gap: 0.6rem;
   font-size: 0.95rem;
-  color: #374151;
+  color: #007aff;
 }
 
 .footer-links span,
@@ -48,7 +48,7 @@
 
 .footer-links span:hover,
 .footer-social span:hover {
-  color: rgba(0, 122, 255, 0.7);
+  color: #007aff;
   transform: translateY(-2px);
 }
 
