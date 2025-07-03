@@ -1,7 +1,7 @@
 import React from 'react';
 import { celulares } from '../data/data';
 import CardCelular from '../components/CardCelular';
-import './Home.css';
+import './home.css';
 
 const destacados = celulares.slice(0, 3);
 
